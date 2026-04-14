@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhullia Valentim | Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <img src="/public/Jhullia Foto selfie.jpg" alt="Jhullia" class="profile-pic">
+            <h1>Jhullia Valentim</h1>
+            <p class="job-title">Software Developer</p>
+        </header>
+
+        <main class="links-list">
+            <a href="#" class="link-item featured" target="_blank">
+                <i class="fa-solid fa-briefcase"></i> Portfólio Profissional
+            </a>
+
+            <a href="https://www.linkedin.com/in/jhulliavalentim/" class="link-item" target="_self">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            </a>
+
+            <a href="https://github.com/JhulliaValentim" class="link-item" target="_self">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+            <a href="https://www.instagram.com/jhulsvp/" class="link-item" target="_self">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhulliavalentim.dev@gmail.com" class="link-item" target="_blank">
+                <i class="fa-regular fa-envelope"></i> E-mail (Gmail)
+            </a>
+        </main>
+
+        <footer>
+            <button class="share-btn" onclick="share()">Copiar link da página</button>
+        </footer>
+    </div>
+
+    <script>
+        function share() {
+            navigator.clipboard.writeText(window.location.href);
+            alert("Link copiado!");
+        }
+    </script>
+</body>
+
+</html>
