@@ -1,121 +1,442 @@
-  :root {
-      --bg-page: #2a2231;
-      --bg-card: #2b2033;
-      --text-main: #f3e8e6;
-      --text-sub: #a89f9e;
-      --primary-accent: #c98a8e;
-      --primary-hover: #e5b8b7;
-      --border-color: #382f3a;
-  }
+:root {
+    --background: #ffffff;
+    --card: #ffffff;
 
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
+    --text: #252125;
+    --text-light: #827b80;
 
-  body {
-      background-color: var(--bg-page);
-      color: var(--text-main);
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 2rem 1rem;
-  }
+    --rose: #c98f95;
+    --rose-hover: #b97880;
 
-  .main-container {
-      background-color: var(--bg-card);
-      padding: 3rem 2rem;
-      border-radius: 16px;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
+    --border: #ece8ea;
+}
 
-  .profile-pic {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--primary-accent);
-      padding: 4px;
-      margin-bottom: 1rem;
-  }
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      margin-bottom: 0.2rem;
-  }
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
 
-  .job-title {
-      color: var(--primary-accent);
-      font-weight: 500;
-      font-size: 0.85rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-  }
+/* PÁGINA */
+body {
+    min-height: 100vh;
 
-  .links-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-  }
+    background: var(--background);
 
-  .link-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background-color: transparent;
-      color: var(--text-main);
-      text-decoration: none;
-      padding: 0.9rem;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      border: 1px solid var(--border-color);
-  }
+    font-family: "Poppins", sans-serif;
 
-  .link-item i {
-      font-size: 1.1rem;
-      width: 20px;
-      text-align: center;
-  }
+    color: var(--text);
 
-  .link-item:hover {
-      border-color: var(--primary-accent);
-      background-color: rgba(201, 138, 142, 0.05);
-      color: var(--primary-hover);
-      transform: translateY(-3px);
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .link-item.featured {
-      background-color: var(--primary-accent);
-      color: #120e15;
-      border-color: var(--primary-accent);
-      font-weight: 600;
-  }
+    padding: 35px 20px;
+}
 
-  .link-item.featured:hover {
-      background-color: var(--primary-hover);
-      color: #120e15;
-  }
+/* CARD PRINCIPAL */
+.main-container {
+    width: 100%;
+    max-width: 420px;
 
-  footer {
-      margin-top: 2rem;
-  }
+    background: var(--card);
 
-  .share-btn {
-      background: none;
-      border: none;
-      color: var(--text-sub);
-      cursor: pointer;
-      font-size: 0.8rem;
-      text-decoration: underline;
-  }
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    padding: 38px 30px 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(31, 25, 28, 0.08),
+        0 4px 15px rgba(31, 25, 28, 0.03);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FOTO */
+.profile-pic {
+    width: 112px;
+    height: 112px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 4px;
+
+    background: white;
+
+    border: 2px solid #d8a5aa;
+
+    box-shadow:
+        0 8px 24px rgba(201, 143, 149, 0.18);
+
+    margin-bottom: 16px;
+}
+
+/* NOME */
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    color: #242024;
+
+    line-height: 1.2;
+
+    margin-bottom: 7px;
+}
+
+/* CARGO */
+.job-title {
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    color: var(--rose);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 28px;
+}
+
+/* LISTA */
+/* =========================================
+   LISTA DE BOTÕES
+========================================= */
+
+.links-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================
+   BOTÃO PADRÃO
+========================================= */
+
+.link-item {
+    width: 100%;
+    min-height: 53px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    border-radius: 13px;
+    border: 1px solid #ece8ea;
+
+    background: #ffffff;
+
+    color: #343034;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.025);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* ÍCONES */
+
+.link-item i {
+    width: 23px;
+
+    font-size: 1.15rem;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* HOVER GERAL */
+
+.link-item:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 22px rgba(0, 0, 0, 0.07);
+}
+
+.link-item:hover i {
+    transform: scale(1.12);
+}
+
+
+/* =========================================
+   PORTFÓLIO
+========================================= */
+
+.link-item.featured {
+    background: linear-gradient(
+        135deg,
+        #c98f95 0%,
+        #dda9ad 100%
+    );
+
+    color: #ffffff;
+
+    border: 1px solid transparent;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(201, 143, 149, 0.27);
+}
+
+.link-item.featured i {
+    color: #ffffff;
+}
+
+.link-item.featured:hover {
+    background: linear-gradient(
+        135deg,
+        #b97880 0%,
+        #cc9298 100%
+    );
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(201, 143, 149, 0.35);
+}
+
+
+/* =========================================
+   LINKEDIN
+========================================= */
+
+.linkedin {
+    background: #f7faff;
+
+    border-color: #dceaf7;
+
+    color: #30343a;
+}
+
+.linkedin i {
+    color: #0a66c2;
+}
+
+.linkedin:hover {
+    background: #eef6ff;
+
+    border-color: #0a66c2;
+
+    color: #0a66c2;
+
+    box-shadow:
+        0 8px 20px rgba(10, 102, 194, 0.13);
+}
+
+.linkedin:hover i {
+    color: #0a66c2;
+}
+
+
+/* =========================================
+   GITHUB
+========================================= */
+
+.github {
+    background: #fafafa;
+
+    border-color: #e4e4e6;
+
+    color: #24292f;
+}
+
+.github i {
+    color: #24292f;
+}
+
+.github:hover {
+    background: #24292f;
+
+    border-color: #24292f;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 9px 22px rgba(36, 41, 47, 0.20);
+}
+
+.github:hover i {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   INSTAGRAM
+========================================= */
+
+.instagram {
+    background: #fff8fb;
+
+    border-color: #f2dfe8;
+
+    color: #343034;
+}
+
+.instagram i {
+    color: #d63c7f;
+}
+
+.instagram:hover {
+    background: #fff0f6;
+
+    border-color: #d63c7f;
+
+    color: #bd326d;
+
+    box-shadow:
+        0 8px 20px rgba(214, 60, 127, 0.13);
+}
+
+.instagram:hover i {
+    color: #d63c7f;
+}
+
+
+/* =========================================
+   E-MAIL
+========================================= */
+
+.email {
+    background: #fffafa;
+
+    border-color: #efe2e3;
+
+    color: #343034;
+}
+
+.email i {
+    color: #c77f84;
+}
+
+.email:hover {
+    background: #fff1f2;
+
+    border-color: #c98f95;
+
+    color: #b76f75;
+
+    box-shadow:
+        0 8px 20px rgba(201, 143, 149, 0.14);
+}
+
+.email:hover i {
+    color: #b76f75;
+}
+
+
+/* =========================================
+   BOTÃO COPIAR LINK
+========================================= */
+
+footer {
+    margin-top: 24px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #827b80;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.76rem;
+    font-weight: 400;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.share-btn i {
+    font-size: 0.78rem;
+}
+
+.share-btn:hover {
+    color: #b97880;
+
+    background: #fff5f6;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 500px) {
+
+    .links-list {
+        gap: 11px;
+    }
+
+    .link-item {
+        min-height: 51px;
+
+        padding: 13px 15px;
+
+        font-size: 0.88rem;
+    }
+
+    .link-item i {
+        font-size: 1.1rem;
+    }
+}

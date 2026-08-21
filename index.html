@@ -3,54 +3,143 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Jhullia Valentim | Links</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    >
+
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style/style.css"
+    >
 </head>
 
 <body>
+
     <div class="main-container">
+
         <header>
-            <img src="assets/JhulliaFotoselfie.jpg" alt="Jhullia" class="profile-pic">
+
+            <img
+                src="assets/JhulliaFotoselfie.png"
+                alt="Foto de Jhullia Valentim"
+                class="profile-pic"
+            >
+
             <h1>Jhullia Valentim</h1>
-            <p class="job-title">Software Developer</p>
+
+            <p class="job-title">
+                Software Developer
+            </p>
+
         </header>
 
-        <main class="links-list">
-            <a href="#" class="link-item featured" target="_blank">
-                <i class="fa-solid fa-briefcase"></i> Portfólio Profissional
-            </a>
 
-            <a href="https://www.linkedin.com/in/jhulliavalentim/" class="link-item" target="_blank">
-                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-            </a>
+       <main class="links-list">
 
-            <a href="https://github.com/JhulliaValentim" class="link-item" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
+    <a
+        href="https://jhulliavalentimportifolio-seven.vercel.app/"
+        class="link-item featured"
+        target="_blank"
+    >
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Portfólio Profissional</span>
+    </a>
 
-            <a href="https://www.instagram.com/jhulsvp/" class="link-item" target="_blank">
-                <i class="fa-brands fa-instagram"></i> Instagram
-            </a>
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhulliavalentim.dev@gmail.com" class="link-item" target="_blank">
-                <i class="fa-regular fa-envelope"></i> E-mail (Gmail)
-            </a>
-        </main>
+    <a
+        href="https://www.linkedin.com/in/jhulliavalentim/"
+        class="link-item linkedin"
+        target="_blank"
+    >
+        <i class="fa-brands fa-linkedin-in"></i>
+        <span>LinkedIn</span>
+    </a>
+
+
+    <a
+        href="https://github.com/JhulliaValentim"
+        class="link-item github"
+        target="_blank"
+    >
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+    </a>
+
+
+    <a
+        href="https://www.instagram.com/jhulsvp/"
+        class="link-item instagram"
+        target="_blank"
+    >
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+    </a>
+
+
+    <a
+        href="mailto:jhulliavalentim.dev@gmail.com"
+        class="link-item email"
+    >
+        <i class="fa-regular fa-envelope"></i>
+        <span>E-mail</span>
+    </a>
+
+</main>
+
 
         <footer>
-            <button class="share-btn" onclick="share()">Copiar link da página</button>
+
+            <button
+                class="share-btn"
+                onclick="sharePage()"
+            >
+                <i class="fa-solid fa-link"></i>
+                Copiar link da página
+            </button>
+
         </footer>
+
     </div>
 
+
     <script>
-        function share() {
-            navigator.clipboard.writeText(window.location.href);
-            alert("Link copiado!");
+
+        function sharePage() {
+
+            navigator.clipboard
+                .writeText(window.location.href)
+                .then(() => {
+
+                    alert("Link copiado!");
+
+                })
+                .catch(() => {
+
+                    alert("Não foi possível copiar o link.");
+
+                });
+
         }
+
     </script>
+
 </body>
 
 </html>
